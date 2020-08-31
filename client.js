@@ -37,6 +37,7 @@ if (!localStorage.getItem("logger-token")) {
     }
   })
   global.bot.on("ready", () => {
+    global.bot.user.setGame("Listening to: EmoteFroggy")
     pushSysMessage("INFO: Logged in as " + global.bot.user.tag)
     global.bot.user.setPresence("Logging messages", {type: "PLAYING"})
     if (localStorage.getItem("logger-channelid") !== "" && !global.bot.channels.get(localStorage.getItem("logger-channelid"))) {
