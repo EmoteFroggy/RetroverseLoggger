@@ -38,7 +38,7 @@ if (!localStorage.getItem("logger-token")) {
   })
   global.bot.on("ready", () => {
     pushSysMessage("INFO: Logged in as " + global.bot.user.tag)
-    global.bot.user.setPresence("Logging messages", {type: "PLAYING"})
+    global.bot.user.setGame("Logging messages", {type: "PLAYING"})
     if (localStorage.getItem("logger-channelid") !== "" && !global.bot.channels.get(localStorage.getItem("logger-channelid"))) {
       pushSysMessage("WARNING: Invalid Channel ID provided")
     }
